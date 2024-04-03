@@ -1,0 +1,14 @@
+  FindDuplicate() {
+    var str = 'Maharashtra'.split('');
+    let count = new Map();
+    for (let i = 0; i < str.length; i++) {
+      if (count.has(str[i])) {
+        count.set(str[i], count.get(str[i]) + 1);
+      } else {
+        count.set(str[i], 1);
+      }
+    }
+    for (let [it, it2] of count) {
+      if (it2 > 1) console.log(it, 'count', it2);
+    }
+  }
